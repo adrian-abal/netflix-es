@@ -1,2 +1,8 @@
 @use './partials/_reset';
 @use './partials/_custom';
+
+.Wrapper {
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+}

@@ -1,0 +1,61 @@
+.Header{
+  background-color: var(--carbon);
+  
+  &-center{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em 2.9em ;
+ }
+
+  &-h1{}
+
+  &-svg{
+    width: 9.25em;
+    color: var(--netflix-red);
+    
+    &:hover{
+        color: rgb(193,17,25);
+    }
+  }
+  
+  &-user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.4em;
+  }
+
+  &-login{
+    padding: .5em 1em;
+    border-radius: .25em;
+    color: #fff;
+    background-color: var(--netflix-red);
+    font-weight: 600;
+    font-size: .905em;
+    line-height: 1.2;
+
+    &:hover{
+        background-color: rgb(193,17,25);
+    }
+  }
+
+}
+
+.Language{
+  padding: .35em 2.25em;
+  border-radius: .25em;
+  color: #fff;
+  appearance: none;
+  outline: none;
+  border: 1px solid rgb(95, 95, 95);
+  line-height: 1.2;
+
+  background:  url('assets/svg/translate.svg') no-repeat center left .75em / .9em, url('assets/svg/down-arrow.svg') no-repeat top .75em right .75em / .5em;
+  
+  &-option{
+    display: block;
+    color: var(--carbon);
+  }
+}
