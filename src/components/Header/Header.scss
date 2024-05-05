@@ -1,15 +1,17 @@
 .Header{
   // background-color: var(--carbon);
+  position: relative;
+  z-index: 2; 
   
   &-center{
     width: 100%;
     max-width: 80em;
     margin: 0 auto;
-    padding: 1.5em 2.8em;
+    padding: 1.5em 3em;
     display: flex;
     justify-content: space-between;
     align-items: center;
-  
+
     @media screen AND (max-width:640px){
       width: 90%;
       padding: 1.5em 0;
@@ -18,15 +20,17 @@
 
   &-h1{}
 
-  &-home{
-    transition: transform .2s ease;
+  &-home{ 
+    // transition: transform .2s ease;
     
     &:hover {
-      transform: scale(.99);}
+      transform: scale(.99);
+    }
   }
 
   &-svg{
-    width: 9.25em;
+    width: 100%;
+    max-width: 9.25em;
     color: var(--netflix-red);
     
     &:hover{
@@ -34,7 +38,7 @@
     }
 
     @media screen AND (max-width:640px){
-      width: 7.25em;
+      max-width: 7.25em;
     }
   }
   
@@ -81,8 +85,9 @@
     align-items: baseline;
     gap: .75em;
     padding: .5em 1em;
-    border: 1px solid  rgb(95, 95, 95);
+    border: 1px solid var(--grey);
     border-radius: .25em;
+    background-color: rgba(0 0 0 / .6);
     cursor: pointer;
 
     position: relative;
@@ -129,7 +134,7 @@
     align-items: center;
     flex-direction: column;
 
-    background-color: var(--carbon);
+    background-color: rgba(0 0 0 / .6);
 
     position: absolute;
     top: 2.5em;
@@ -141,7 +146,7 @@
 
     &.isOpen{
       height: fit-content;
-      border: 1px solid  rgb(95, 95, 95);
+      border: 1px solid var(--grey);
       border-radius: .25em;
     }
   }
