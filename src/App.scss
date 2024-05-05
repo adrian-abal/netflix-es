@@ -5,4 +5,14 @@
   width: 100%;
   max-width: 110rem;
   margin: 0 auto;
+// background-color: rgb(24, 121, 45);
+}
+
+.Main{
+  width: 100%;
+  height: 100vh;
+  background-color: var(--carbon);
+  position: absolute;
+  top: 0;
+  z-index: 1;
 }

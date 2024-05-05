@@ -1,0 +1,170 @@
+.Subscribe {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+
+   background-color: transparent;
+  // background-color: rgba(0 0 0 / .2);
+
+  &-content {
+    width: 100%;
+    max-width: 45em;
+    padding: 3em 4.25em;
+    border-radius: .25em;
+    background-color: rgba(0 0 0 / .7);
+
+    @media screen AND (max-width:480px){
+      width: 90%;
+      padding: 1.5em;
+    }
+  }
+  
+  &-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &-h2 {
+    color: #fff;
+    font-size: 2em;
+    font-weight: 600;
+
+    @media screen AND (max-width:480px){
+      font-size: 1.5em;
+    }
+  }
+
+  &-body {
+    margin: 2em 0 0;
+  }
+  
+  &-p {
+    color: #fff;
+    font-size: 1.1em;
+
+    @media screen AND (max-width:480px){
+      font-size: 1em;
+    }
+  }
+}
+
+.Form {
+  margin: 1.5em 0 0;
+
+  &-group {
+  
+    &--email{
+      position: relative;
+    }
+
+    &--controller {
+      display: flex;
+      align-items: center;
+      gap: 1em;
+      margin: 1em 0 0;
+    }
+  }
+
+  &-input {
+    width: 100%;
+    padding: 1.5em 0 .75em 1em;
+    border: 1px solid rgba(128 128 128 / .5);
+    border-radius: .25em;
+    outline: none;
+    color: rgba(255 255 255 / .7);
+    background-color: rgba(0 0 0 / .6);
+    //line-height: 1.5;
+
+    &:is(:focus, :valid) ~ label {
+    position: absolute;
+    top: 1.25em;
+    left: 1.25em;
+    font-size: .75em;
+    font-weight: 400;
+    transition: all .2s ease;   
+    }
+  }
+
+  &-label {
+    position: absolute;
+    top: 50%;
+    left: 1.25em;
+    transform: translateY(-50%); 
+    color: rgba(255 255 255 / .7);
+    font-size: 1em;
+    font-weight: 600;
+  }
+
+  &-button {
+    padding: 1em 1.25em;
+    border-radius: .25em;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+
+    &--back {
+      flex-shrink: 1;
+      background-color: rgba(128 128 128 / .2); 
+     
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        margin: 0 0.5em 0 0 ;
+        background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z'/></svg>")
+              no-repeat center center / contain;
+        vertical-align: middle;
+        transition: all .2s ease;        
+      }
+  
+      &:hover::before {
+        background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff' viewBox='0 0 16 16'><path d='M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z'/></svg>")
+                no-repeat center center / contain;
+        transform: translateX(-.25em);
+      }
+
+      &:hover {
+       background-color: rgba(128 128 128 / .3);
+      }
+    }
+    
+    &--continue {
+      flex-grow: 1;
+      background-color: var(--netflix-red);
+
+      &::after {
+        content: '';
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        margin: 0 0 0 .5em;
+        background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z'/></svg>")
+              no-repeat center center / contain;
+        vertical-align: middle;
+        transition: all .2s ease;
+      }
+  
+      &:hover::after {
+        background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff' viewBox='0 0 16 16'><path d='M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z'/></svg>")
+                no-repeat center center / contain;
+        transform: translateX(.25em);
+      }
+
+      &:hover {
+        background-color: var(--netflix-red-transparent);
+      }
+    }
+  }
+}
