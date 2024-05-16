@@ -1,0 +1,114 @@
+.Banner {
+  width: 100%;
+  max-width: 110em;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 2em;
+  position: relative;
+  transform: translateY(-50%);
+  z-index: 2; 
+
+  @media screen AND (max-width:640px){
+    margin: 4em 0;
+    transform: translateY(0%);
+  }
+
+  &-center {
+    width: 100%;
+    padding: 1.5em;
+
+    border-radius: .25em;
+    background: radial-gradient(
+    51.39% 511.66% at 47.68% -217.91%,
+    #ff9900 0%,
+    #e50914 17.27%,
+    #0e1b4f 79.44%,
+    #000413 100%);
+    
+    @media screen AND (max-width:640px){
+      background: radial-gradient(
+            120.35% 220% at 49.86% -6.29%,
+            #e50914 0%,
+            #0e1b4f 46.15%,
+            #0d1121 100%);
+    }
+  }
+
+  &-info {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+
+    @media screen AND (max-width:640px){
+      flex-wrap: wrap;
+      justify-content: start;
+      position: relative;
+    } 
+  }
+
+  &-image{
+
+    @media screen AND (max-width:640px){
+      width: 100%;
+    } 
+  }
+
+  &-svg {
+    width: 6em;
+
+    @media screen AND (max-width:640px){
+      width: 5em;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateY(-80%);
+    }
+  }
+ 
+  &-text {}
+
+  &-p {
+    color: #fff;
+    text-wrap: pretty;
+
+    &--first {
+      font-size: 1.25em;
+      font-weight: 500;
+    }
+
+    &--second {
+      margin: .5em 0 0;
+      font-size: 1em;
+      font-weight: 400;
+    }
+  }
+  
+  &-a {
+    display: inline-block;
+    margin: .75em 0 0;
+    color: var(--blue);
+    font-size: 1em;
+    font-weight: 600;
+    text-decoration: underline;
+    cursor: pointer;
+
+    position: relative;
+
+    &::after{
+      content: '';
+      display: inline-block;
+      width: 1.35em;
+      height: 1.35em;
+      background: url('assets/svg/chevron-right.svg') no-repeat center center / contain;
+      vertical-align: middle;
+      transition: transform .2s ease;
+    }
+    
+    &:hover:after{
+      transform: translateX(.2em);
+    }
+  }
+}

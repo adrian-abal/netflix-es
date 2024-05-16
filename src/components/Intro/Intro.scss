@@ -1,9 +1,7 @@
 .Intro {
   width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 90vh;
+  margin: 0 auto;
   
   background: url('assets/img/ES-es-20240429-popsignuptwoweeks-perspective_alpha_website_large.jpg') no-repeat bottom center / cover;
 
@@ -14,10 +12,28 @@
     content: '';
     width: 100%;
     height: 100%;
+    height: calc(100% + 1px);
     position: absolute;
     top: 0;
     left: 0;
-    background: linear-gradient(180deg, rgba(0,0,0, .75) 0%, rgba(0,0,0,0.35) 66%, rgba(0,0,0,.7) 100%);
+    background: linear-gradient(180deg, rgba(0,0,0, .75) 0%, rgba(0,0,0,0.35) 66%, rgba(0,0,0,1) 100%);
+  }
+  
+  &-wrapper {
+    width: 100%;
+    max-width: 110em;
+    margin: 0 auto;
+  }
+
+  &-column {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0 2em;
+    position: relative;
   }
 
   &-center {
@@ -27,9 +43,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
-    padding: 1.5em 3em;
-    position: relative;
+ 
+    padding: 1.5em 0;
     z-index: 2;
 
     &.isHide {
@@ -68,7 +83,7 @@
     background-color: var(--netflix-red);
     box-shadow: 0 .5em 1em var(--black-transparent);
     font-size: 1.25em;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.3;
     cursor: pointer;
     position: relative;
@@ -92,6 +107,11 @@
 
     &:hover {
       background-color: var(--netflix-red-transparent);
+    }
+
+    @media screen AND (max-width:480px) {
+      font-size: 1.15em;
+      line-height: initial;
     }
   }
 }

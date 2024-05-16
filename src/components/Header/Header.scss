@@ -1,21 +1,23 @@
 .Header{
-  // background-color: var(--carbon);
+  width: 100%;
+  max-width: 110rem;
+  margin: 0 auto;
   position: relative;
-  z-index: 2; 
+  z-index: 2;
+  padding: 0 2em;
+
+  &-center {
+    display: flex;
+    justify-content: center;
+  }
   
-  &-center{
+  &-spaced {
     width: 100%;
     max-width: 80em;
-    margin: 0 auto;
-    padding: 1.5em 3em;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-
-    @media screen AND (max-width:640px){
-      width: 90%;
-      padding: 1.5em 0;
-    }
+    align-items: center; 
+    padding: 1.5em 0em;
  }
 
   &-h1{}

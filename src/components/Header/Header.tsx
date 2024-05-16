@@ -11,8 +11,8 @@ const Header = ()=>{
     return (
     <>
       <header className="Header">
-        <div className="Wrapper">
-          <div className="Header-center">
+        <div className="Header-center">
+          <div className="Header-spaced">
             <h1 className="Header-h1">
               <a className="Header-home" href="#" title="Netflix home">
                 <svg
