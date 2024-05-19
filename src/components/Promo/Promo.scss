@@ -9,7 +9,7 @@
   transform: translateY(-50%);
   z-index: 2; 
 
-  @media screen AND (max-width:640px){
+  @media screen AND (max-width:640px) {
     margin: 4em 0;
     transform: translateY(0%);
   }
@@ -26,7 +26,7 @@
     #0e1b4f 79.44%,
     #000413 100%);
     
-    @media screen AND (max-width:640px){
+    @media screen AND (max-width:640px) {
       background: radial-gradient(
             120.35% 220% at 49.86% -6.29%,
             #e50914 0%,
@@ -42,7 +42,7 @@
     align-items: center;
     gap: 2em;
 
-    @media screen AND (max-width:640px){
+    @media screen AND (max-width:640px) {
       flex-wrap: wrap;
       justify-content: start;
       position: relative;
@@ -51,7 +51,7 @@
 
   &-image{
 
-    @media screen AND (max-width:640px){
+    @media screen AND (max-width:640px) {
       width: 100%;
     } 
   }
@@ -59,7 +59,7 @@
   &-svg {
     width: 6em;
 
-    @media screen AND (max-width:640px){
+    @media screen AND (max-width:640px) {
       width: 5em;
       position: absolute;
       top: 0;
@@ -92,23 +92,31 @@
     color: var(--blue);
     font-size: 1em;
     font-weight: 600;
-    text-decoration: underline;
+    
     cursor: pointer;
 
     position: relative;
 
-    &::after{
+    &::after {
       content: '';
       display: inline-block;
-      width: 1.35em;
-      height: 1.35em;
+      width: 1.25em;
+      height: 1.25em;
       background: url('assets/svg/chevron-right.svg') no-repeat center center / contain;
       vertical-align: middle;
       transition: transform .2s ease;
     }
     
-    &:hover:after{
+    &:hover:after {
+      width: 1.3em;
+      height: 1.3em;
+      background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='%230071eb' width='24' height='24' viewBox='0 0 24 24' role='img' data-icon='ChevronRightStandard' aria-hidden='true'><path fill-rule='evenodd' clip-rule='evenodd' d='M15.5859 12L8.29303 19.2928L9.70725 20.7071L17.7072 12.7071C17.8948 12.5195 18.0001 12.2652 18.0001 12C18.0001 11.7347 17.8948 11.4804 17.7072 11.2928L9.70724 3.29285L8.29303 4.70706L15.5859 12Z' fill=''></path></svg>") no-repeat center center / contain;
       transform: translateX(.2em);
+    }
+
+    &:hover {
+      color:#0071eb;
+      text-decoration: underline;
     }
   }
 }

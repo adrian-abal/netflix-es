@@ -4,11 +4,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
   position: absolute;
-  top: 35%;
+  top: -5%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 5%);
   z-index: 999;
+  
   background-color: transparent;
   // background-color: rgba(0 0 0 / .2);
 
@@ -39,7 +41,7 @@
     height: 2.75em;
     color: #fff;
 
-    @media screen AND (max-width:480px){
+    @media screen AND (max-width:480px) {
       width: 2.5em;
       height: 2.5em;
     }
@@ -52,7 +54,7 @@
     border-radius: .25em;
     background-color: rgba(0 0 0 / .7);
 
-    @media screen AND (max-width:480px){
+    @media screen AND (max-width:480px) {
       padding: 1.5em 2.125em;
     }
 
@@ -70,7 +72,7 @@
     font-size: 2em;
     font-weight: 600;
 
-    @media screen AND (max-width:480px){
+    @media screen AND (max-width:480px) {
       font-size: 1.5em;
     }
   }
@@ -83,7 +85,7 @@
     color: #fff;
     font-size: 1.05em;
 
-    @media screen AND (max-width:480px){
+    @media screen AND (max-width:480px) {
       font-size: 1em;
     }
   }
@@ -159,6 +161,7 @@
     color: #fff;
     cursor: pointer;
     position: relative;
+    line-height: 1.5;
     
     &--continue {
       flex-grow: 1;
@@ -171,14 +174,14 @@
         height: 1em;
         margin: 0 0 0 .5em;
         background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z'/></svg>")
-              no-repeat center center / contain;
+          no-repeat center center / contain;
         vertical-align: middle;
         transition: all .2s ease;
       }
   
       &:hover::after {
         background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff' viewBox='0 0 16 16'><path d='M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z'/></svg>")
-                no-repeat center center / contain;
+          no-repeat center center / contain;
         transform: translateX(.25em);
       }
 

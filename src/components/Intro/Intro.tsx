@@ -20,8 +20,8 @@ const Intro = () => {
         <div className="Intro-wrapper">
           <div className="Intro-column">
             <div className={open ? `Intro-center isHide` : `Intro-center`}>
-              <h2 className="Intro-h2">Películas y series sin límites y mucho más</h2>
-              <h3 className="Intro-h3">Disfruta donde quieras. Cancela cuando quieras.</h3>
+              <h1 className="Intro-h1">Películas y series sin límites y mucho más</h1>
+              <p className="Intro-p">Disfruta donde quieras. Cancela cuando quieras.</p>
               <button className='Intro-start' onClick={handleOpenDialog} type='button' aria-label='Empezar' >Empezar</button>
             </div>
           </div>

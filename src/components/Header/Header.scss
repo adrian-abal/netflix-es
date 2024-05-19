@@ -1,4 +1,4 @@
-.Header{
+.Header {
   width: 100%;
   max-width: 110rem;
   margin: 0 auto;
@@ -20,9 +20,7 @@
     padding: 1.5em 0em;
  }
 
-  &-h1{}
-
-  &-home{ 
+  &-home { 
     // transition: transform .2s ease;
     
     &:hover {
@@ -30,17 +28,18 @@
     }
   }
 
-  &-svg{
+  &-svg {
     width: 100%;
     max-width: 9.25em;
     color: var(--netflix-red);
     
-    &:hover{
-        color: var(--netflix-red-transparent);
+    &:hover {
+      color: var(--netflix-red-transparent);
     }
 
     @media screen AND (max-width:640px){
-      max-width: 7.25em;
+      // max-width: 7.25em;
+      max-width: 8.25em;
     }
   }
   
@@ -55,16 +54,15 @@
     }
   } 
 
-  &-login{
+  &-login {
     padding: .5em 1em;
     border-radius: .25em;
     color: #fff;
     background-color: var(--netflix-red);
     font-weight: 600;
     font-size: .9em;
-    // line-height: 1.4825;
 
-    &:hover{
+    &:hover {
       background-color: var(--netflix-red-transparent);
     }
   }
@@ -77,11 +75,11 @@
   flex-direction: column; 
   position: relative;
 
-  @media screen AND (max-width:375px){
+  @media screen AND (max-width:420px) {
     display: none;
   }
 
-  &-button{
+  &-button {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
@@ -94,7 +92,7 @@
 
     position: relative;
 
-    &::after{
+    &::after {
       content: '';
       display: inline-block;
       width: .5em;
@@ -111,23 +109,23 @@
     }
   }
 
-  &-svg{
+  &-svg {
     width: .9em;
     height: .9em;
     color: #fff;
   }
 
-  &-span{
+  &-span {
     color: #fff;
     font-size: .9em;
     line-height: 1.041;
 
-    @media screen AND (max-width:640px){
+    @media screen AND (max-width:640px) {
       display: none;
     }
   }
 
-  &-ul{
+  &-ul {
     width: 100%;
     height: 0;
     overflow: hidden;
@@ -142,32 +140,32 @@
     top: 2.5em;
     left: 0; 
 
-    @media screen AND (max-width:640px){
+    @media screen AND (max-width:640px) {
       width: fit-content;
     }
 
-    &.isOpen{
+    &.isOpen {
       height: fit-content;
       border: 1px solid var(--grey);
       border-radius: .25em;
     }
   }
 
-  &-li{
+  &-li {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  &-a{
+  &-a {
     width: 100%;
     padding: .45em .9em;
     color: #fff;
     text-align: center;
     font-size: .9em;
   
-    &:hover{
+    &:hover {
       background-color: var(--black-transparent);
     }
   }
