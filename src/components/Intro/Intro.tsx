@@ -22,7 +22,7 @@ const Intro = () => {
             <div className={open ? `Intro-center isHide` : `Intro-center`}>
               <h1 className="Intro-h1">Películas y series sin límites y mucho más</h1>
               <p className="Intro-p">Disfruta donde quieras. Cancela cuando quieras.</p>
-              <button className='Intro-start' onClick={handleOpenDialog} type='button' aria-label='Empezar' >Empezar</button>
+              <button className='Intro-start' onClick={handleOpenDialog} type='button' aria-label='Empezar'>Empezar</button>
             </div>
           </div>
         </div>
