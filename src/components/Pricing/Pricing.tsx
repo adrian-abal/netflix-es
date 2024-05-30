@@ -1,8 +1,16 @@
+import { useState } from 'react';
+
 import './Pricing.scss'
 import { PLANS } from '../../consts/pricing-data';
 
 const Pricing = () => {
   
+    const [tab, setTab] = useState(0);
+
+    const handleShowTab = (tab: number) => {
+      setTab(tab);
+    }
+
     return (
       <>
         <section className="Pricing">
@@ -10,30 +18,55 @@ const Pricing = () => {
               <h2 className="Pricing-h2">Elige el plan ideal para ti</h2>
               <div className="Pricing-wrapper">
                   <div className="Pricing-row">
-                    <ul className="Pricing-list">
-                      {
-                        PLANS.map(({id, name, description, price, quality, resolution, surroundAudio, supportedDevices, simultaneousDevices, downloadsPerDevice, ads}, index ) => { 
-                          
-                          return (                           
-                            <li className="Pricing-item" key={id}>
-                              <Plan 
-                                index={index}
-                                name={name} 
-                                description={description}
-                                price={price}
-                                quality={quality}
-                                resolution={resolution}
-                                surroundAudio={surroundAudio}
-                                supportedDevices={supportedDevices}
-                                simultaneousDevices={simultaneousDevices}
-                                downloadsPerDevice={downloadsPerDevice}
-                                ads={ads}
-                               />
-                            </li>
-                          )
-                        })
-                      }
-                    </ul>
+                    <div className="Pricing-controls">
+                      <ol className="Pricing-tabs">
+                        <li className="Pricing-tab">
+                          <button onClick={ () => handleShowTab(0) } className={`Pricing-button Pricing-button--premium ${tab === 0 ? 'isActive' : ''}`} aria-label="Plan Premium">
+                            <strong className="Pricing-name">Premium</strong>
+                            <span className="Pricing-description">4K + HDR</span>
+                          </button>
+                        </li>
+                        <li className="Pricing-tab">
+                          <button onClick={ () => handleShowTab(1) } className={`Pricing-button Pricing-button--standard ${tab === 1 ? 'isActive' : ''}`} aria-label="Plan Estándar">
+                            <strong className="Pricing-name">Estándar</strong>
+                            <span className="Pricing-description">1080p</span>
+                          </button>
+                        </li>
+                        <li className="Pricing-tab">
+                          <button onClick={ () => handleShowTab(2) } className={`Pricing-button Pricing-button--standardWithAds ${tab === 2 ? 'isActive' : ''}`} aria-label="Plan Estándar con anuncios">
+                            <strong className="Pricing-name">Estándar con anuncios</strong>
+                            <span className="Pricing-description">1080p</span>
+                          </button>
+                        </li>
+                      </ol>
+                    </div>
+
+                    <div className="Pricing-content">
+                      <ol className="Pricing-list">
+                        {
+                          PLANS.map((plan, index ) => {
+                            return (                           
+                              
+                              <li className={`Pricing-item ${tab === index ? 'isActive' : ''}`} key={plan.id}>
+                                <Plan 
+                                  index={index}
+                                  name={plan.name} 
+                                  description={plan.description}
+                                  price={plan.price}
+                                  quality={plan.quality}
+                                  resolution={plan.resolution}
+                                  surroundAudio={plan.surroundAudio}
+                                  supportedDevices={plan.supportedDevices}
+                                  simultaneousDevices={plan.simultaneousDevices}
+                                  downloadsPerDevice={plan.downloadsPerDevice}
+                                  ads={plan.ads}
+                                 />
+                              </li>
+                            )
+                          })
+                        }
+                      </ol>
+                    </div>
                   </div>
               </div>
             </div>

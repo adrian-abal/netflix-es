@@ -41,7 +41,7 @@ const Mediahub = () => {
                   </div>
                 </div>
                 <div className="Mediahub-features">
-                  <article className={tab === 0 ? `Mediahub-feature isActive` : `Mediahub-feature`}>
+                  <article className={`Mediahub-feature ${tab === 0 ? 'isActive' : ''}`}>
                     <div className="Mediahub-text">
                       <h2 className="Mediahub-h2">Disfruta en tu tele</h2>
                       <p className="Mediahub-p">Smart TV, Playstation, Xbox, Chromecast, Apple TV, reproductores Blu-ray y muchos más.</p>
@@ -52,7 +52,7 @@ const Mediahub = () => {
                     </div>
                   </article>
 
-                  <article className={tab === 1 ? `Mediahub-feature Mediahub-feature--allDevices isActive` : `Mediahub-feature Mediahub-feature--allDevices`}>
+                  <article className={`Mediahub-feature Mediahub-feature--allDevices ${tab === 1 ? 'isActive' : ''}`}>
                     <div className="Mediahub-text">
                       <h2 className="Mediahub-h2">Usa cualquier dispositivo</h2>
                       <p className="Mediahub-p">Ve en streaming todas las películas y series en tu móvil, tableta, ordenador y televisor.</p>
@@ -63,7 +63,7 @@ const Mediahub = () => {
                     </div>
                   </article>
 
-                  <article className={tab === 2 ? `Mediahub-feature isActive` : `Mediahub-feature`}>
+                  <article className={`Mediahub-feature ${tab === 2 ? 'isActive' : ''}`}>
                     <div className="Mediahub-text">
                       <h2 className="Mediahub-h2">Crea perfiles infantiles</h2>
                       <p className="Mediahub-p">Deja que los niños vivan aventuras con sus personajes favoritos en un espacio diseñado exclusivamente para ellos, gratis con tu suscripción.</p>
@@ -73,7 +73,7 @@ const Mediahub = () => {
                     </div>
                   </article>
 
-                  <article className={tab === 3 ? `Mediahub-feature Mediahub-feature--download isActive` : `Mediahub-feature Mediahub-feature--download`}>
+                  <article className={`Mediahub-feature Mediahub-feature--download ${tab === 3 ? 'isActive' : ''}`}>
                     <div className="Mediahub-text">
                       <h2 className="Mediahub-h2">Descárgate tus favoritas para verlas sin conexión</h2>
                       <p className="Mediahub-p">Disfruta de Netflix en tierra, mar y aire…</p>
