@@ -14,62 +14,61 @@ const Pricing = () => {
     return (
       <>
         <section className="Pricing">
-            <div className="Pricing-center">
-              <h2 className="Pricing-h2">Elige el plan ideal para ti</h2>
-              <div className="Pricing-wrapper">
-                  <div className="Pricing-row">
-                    <div className="Pricing-controls">
-                      <ol className="Pricing-tabs">
-                        <li className="Pricing-tab">
-                          <button onClick={ () => handleShowTab(0) } className={`Pricing-button Pricing-button--premium ${tab === 0 ? 'isActive' : ''}`} aria-label="Plan Premium">
-                            <strong className="Pricing-name">Premium</strong>
-                            <span className="Pricing-description">4K + HDR</span>
-                          </button>
-                        </li>
-                        <li className="Pricing-tab">
-                          <button onClick={ () => handleShowTab(1) } className={`Pricing-button Pricing-button--standard ${tab === 1 ? 'isActive' : ''}`} aria-label="Plan Estándar">
-                            <strong className="Pricing-name">Estándar</strong>
-                            <span className="Pricing-description">1080p</span>
-                          </button>
-                        </li>
-                        <li className="Pricing-tab">
-                          <button onClick={ () => handleShowTab(2) } className={`Pricing-button Pricing-button--standardWithAds ${tab === 2 ? 'isActive' : ''}`} aria-label="Plan Estándar con anuncios">
-                            <strong className="Pricing-name">Estándar con anuncios</strong>
-                            <span className="Pricing-description">1080p</span>
-                          </button>
-                        </li>
-                      </ol>
-                    </div>
-
-                    <div className="Pricing-content">
-                      <ol className="Pricing-list">
-                        {
-                          PLANS.map((plan, index ) => {
-                            return (                           
-                              
-                              <li className={`Pricing-item ${tab === index ? 'isActive' : ''}`} key={plan.id}>
-                                <Plan 
-                                  index={index}
-                                  name={plan.name} 
-                                  description={plan.description}
-                                  price={plan.price}
-                                  quality={plan.quality}
-                                  resolution={plan.resolution}
-                                  surroundAudio={plan.surroundAudio}
-                                  supportedDevices={plan.supportedDevices}
-                                  simultaneousDevices={plan.simultaneousDevices}
-                                  downloadsPerDevice={plan.downloadsPerDevice}
-                                  ads={plan.ads}
-                                 />
-                              </li>
-                            )
-                          })
-                        }
-                      </ol>
-                    </div>
+          <div className="Pricing-center">
+            <h2 className="Pricing-h2">Elige el plan ideal para ti</h2>
+            <div className="Pricing-wrapper">
+                <div className="Pricing-column">
+                  <div className="Pricing-controls">
+                    <ol className="Pricing-tabs">
+                      <li className="Pricing-tab">
+                        <button onClick={ () => handleShowTab(0) } className={`Pricing-button Pricing-button--premium ${tab === 0 ? 'isActive' : ''}`} aria-label="Plan Premium">
+                          <strong className="Pricing-name">Premium</strong>
+                          <span className="Pricing-description">4K + HDR</span>
+                        </button>
+                      </li>
+                      <li className="Pricing-tab">
+                        <button onClick={ () => handleShowTab(1) } className={`Pricing-button Pricing-button--standard ${tab === 1 ? 'isActive' : ''}`} aria-label="Plan Estándar">
+                          <strong className="Pricing-name">Estándar</strong>
+                          <span className="Pricing-description">1080p</span>
+                        </button>
+                      </li>
+                      <li className="Pricing-tab">
+                        <button onClick={ () => handleShowTab(2) } className={`Pricing-button Pricing-button--standardWithAds ${tab === 2 ? 'isActive' : ''}`} aria-label="Plan Estándar con anuncios">
+                          <strong className="Pricing-name">Estándar con anuncios</strong>
+                          <span className="Pricing-description">1080p</span>
+                        </button>
+                      </li>
+                    </ol>
                   </div>
-              </div>
+                  <div className="Pricing-content">
+                    <ol className="Pricing-list">
+                      {
+                        PLANS.map((plan, index ) => {
+                          return (                           
+                            
+                            <li className={`Pricing-item ${tab === index ? 'isActive' : ''}`} key={plan.id}>
+                              <Plan 
+                                index={index}
+                                name={plan.name} 
+                                description={plan.description}
+                                price={plan.price}
+                                quality={plan.quality}
+                                resolution={plan.resolution}
+                                surroundAudio={plan.surroundAudio}
+                                supportedDevices={plan.supportedDevices}
+                                simultaneousDevices={plan.simultaneousDevices}
+                                downloadsPerDevice={plan.downloadsPerDevice}
+                                ads={plan.ads}
+                               />
+                            </li>
+                          )
+                        })
+                      }
+                    </ol>
+                  </div>
+                </div>
             </div>
+          </div>
         </section>
       </>
     )

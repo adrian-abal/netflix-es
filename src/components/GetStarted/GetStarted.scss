@@ -1,0 +1,128 @@
+.GetStarted {
+  width: 100%;
+  max-width: 64em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 4em auto;
+
+  &-p {
+    color: #fff;
+    font-size: 1.25em;
+    text-align: center;
+    text-wrap: pretty;
+
+    @media screen AND (max-width:768px) {
+      font-size: 1.05em;
+    }
+  }
+
+  &-form {
+    width: 100%;
+    max-width: 36rem;
+    margin: 1.5em 0 0;
+    display: flex;
+    gap: .5em;
+
+    @media screen AND (max-width:768px) {
+      flex-wrap: wrap;
+      gap: .75em;
+    }
+  }
+    
+  &-group {
+
+    &--email {
+      flex-grow: 1;
+      position: relative;
+    }
+
+    @media screen AND (max-width:768px) {
+      width: 100%;
+    }
+  }
+  
+  &-input {
+    width: 100%;
+    padding: 1.5em 0 .75em 1em;
+    border: 1px solid rgba(128 128 128 / .5);
+    border-radius: .25em;
+    outline: none;
+    color: rgba(255 255 255 / .7);
+    background-color: rgba(0 0 0 / .6);
+    background-color: #0F0F0F;
+  
+    &:is(:focus) ~ label {
+      position: absolute;
+      top: 1.25em;
+      left: 1.25em;
+      font-size: .75em;
+      transition: all .2s ease;
+    }
+    
+      /* Si hay algo escrito en el input, se ajusta la posición del label */
+    &:not(:placeholder-shown) ~ label { 
+      top: 1.25em;
+      left: 1.25em;
+      font-size: .75em;
+      transition: all .2s ease;
+    } 
+    
+      /* Estilo para input válido/inválido y no enfocado */
+      &:not(:focus):not(:placeholder-shown):not(:valid) ~ label {
+        color: var(--error); 
+      }
+    
+      &:not(:focus):not(:placeholder-shown):valid ~ label {
+        color: var(--success);
+      }
+  }
+  
+  &-label {
+    position: absolute;
+    top: 50%;
+    left: 1.25em;
+    transform: translateY(-50%); 
+    color: rgba(255 255 255 / .7);
+  }
+  
+  &-button {
+    min-height: 3.207em;
+    padding: .6em 1.2em;
+    border-radius: .25em;
+    color: #fff;
+    font-size: 1.15em;
+    font-weight: 600;
+    background-color: var(--netflix-red);  
+    cursor: pointer;
+
+    position: relative;
+  
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      margin: 0 0 0 .5em;
+      background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z'/></svg>")
+        no-repeat center center / contain;
+      vertical-align: middle;
+      transition: all .2s ease;
+    }
+  
+    &:hover::after {
+      background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff' viewBox='0 0 16 16'><path d='M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z'/></svg>")
+        no-repeat center center / contain;
+      transform: translateX(.25em);
+    }
+  
+    &:hover {
+      background-color: var(--netflix-red-transparent);
+    }
+
+    @media screen AND (max-width:768px) {
+      width: 100%;
+    }
+  } 
+}

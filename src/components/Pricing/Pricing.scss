@@ -34,15 +34,15 @@
     max-width: 80em;
   }
 
-  &-row {
+  &-column {
     display: flex;
     flex-direction: column;
-    gap: .75em;
-    margin: 0 auto;
     
     @media screen AND (max-width:960px) {
       width: 100%;
       max-width: 40em;
+      gap: .75em;
+      margin: 0 auto;
     } 
   }
 
@@ -110,7 +110,7 @@
 
   &-name {
     color: #fff;
-    font-size: 1.1em;
+    font-size: 1em;
     font-weight: 600;
     text-align: left;
   }
@@ -161,7 +161,7 @@
   &-header {
     padding: 1em;
     border-radius: .5em;
-
+    
     &--premium {
       background:radial-gradient(140.76% 131.96% at 100% 100%, rgb(229, 9, 20) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
     }
@@ -180,7 +180,7 @@
   }
 
   &-name {
-    font-size: 1.2em;
+    font-size: 1.15em;
     font-weight: 600;
   }
 
@@ -203,7 +203,7 @@
 
   &-spec {
     padding: .75em 1em;
-    border:1px solid #222;
+    border: 1px solid #222;
     border-radius: .25em;
     background: linear-gradient(to bottom, #0a0a0a 16%, #1d1d1d);
 
