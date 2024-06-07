@@ -29,8 +29,8 @@ const Subscribe = ({ isOpen, onClose }:{ isOpen: boolean, onClose: () => void } 
                     <input id="focusEmail" className="Form-input" type="email" placeholder="" required/>
                     <label className="Form-label" htmlFor="focusEmail">Dirección de correo</label>
                   </div>
-                  <div className="Form-group Form-group--controller">
-                    <button className="Form-button Form-button--continue" type="submit" arial-label="Continuar">Continuar</button>
+                  <div className="Form-group Form-group--control">
+                    <button className="Form-button" type="submit" arial-label="Continuar">Continuar</button>
                   </div>
                 </form>
               </div>
