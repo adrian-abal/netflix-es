@@ -5,6 +5,7 @@ import Promo from './components/Promo/Promo'
 import Mediahub from './components/Mediahub/Mediahub'
 import Pricing from './components/Pricing/Pricing'
 import Faq from './components/Faq/faq'
+import Footer from './components/Footer/Footer'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
         <Pricing />
         <Faq />
       </main>
+      <Footer />
     </>
   )
 }

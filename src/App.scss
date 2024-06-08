@@ -1,12 +1,10 @@
 @use './partials/_reset';
 @use './partials/_custom';
 
+body {
+  background-color: #000;
+}
+
 .Main {
   width: 100%;
-  // height: 100vh;
-  background-color: var(--carbon);
-  background-color: #000;
-  position: absolute;
-  top: 0;
-  z-index: 1;
 }
