@@ -1,0 +1,102 @@
+.Select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    position: relative;
+  
+    @media screen AND (max-width:420px) {
+      display: none;
+    }
+  
+    &-button {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: .75em;
+      padding: .5em 1em;
+      border: 1px solid var(--grey);
+      border-radius: .25em;
+      background-color: rgba(0 0 0 / .6);
+      cursor: pointer;
+  
+      position: relative;
+  
+      &::after {
+        content: '';
+        display: inline-block;
+        width: .5em;
+        height: .5em;
+        margin:0 0 0 0.0em;
+        background: url('assets/svg/down-arrow.svg') no-repeat center center / contain;
+        vertical-align: middle;
+  
+        transition: transform .2s ease;
+      }
+  
+      &.isOpen::after {
+        transform: rotate(180deg);
+      }
+    }
+  
+    &-svg {
+      width: .9em;
+      height: .9em;
+      color: #fff;
+    }
+  
+    &-span {
+      color: #fff;
+      font-size: .9em;
+      line-height: 1.041;
+  
+      @media screen AND (max-width:640px) {
+        display: none;
+      }
+    }
+  
+    &-ul {
+      width: 100%;
+      height: 0;
+      overflow: hidden;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+  
+      background-color: rgba(0 0 0 / .6);
+  
+      position: absolute;
+      top: 2.5em;
+      left: 0; 
+  
+      @media screen AND (max-width:640px) {
+        width: fit-content;
+      }
+  
+      &.isOpen {
+        height: fit-content;
+        border: 1px solid var(--grey);
+        border-radius: .25em;
+      }
+    }
+  
+    &-li {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    &-a {
+      width: 100%;
+      padding: .45em .9em;
+      color: #fff;
+      text-align: center;
+      font-size: .9em;
+    
+      &:hover {
+        background-color: var(--black-transparent);
+      }
+    }
+  }
