@@ -23,29 +23,6 @@
     align-items: center; 
     padding: 1.5em 0em;
  }
-
-  &-home { 
-    // transition: transform .2s ease;
-    
-    &:hover {
-      transform: scale(.99);
-    }
-  }
-
-  &-svg {
-    width: 100%;
-    max-width: 9.25em;
-    color: var(--netflix-red);
-    
-    &:hover {
-      color: var(--netflix-red-transparent);
-    }
-
-    @media screen AND (max-width:640px){
-      // max-width: 7.25em;
-      max-width: 8.25em;
-    }
-  }
   
   &-user {
     display: flex;
