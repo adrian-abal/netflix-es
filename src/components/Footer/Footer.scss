@@ -40,7 +40,7 @@
   &-link {
     width: calc(100% / 4);
     
-    @media screen AND (max-width:640px) {
+    @media screen AND (max-width:768px) {
       width: calc(100% / 2);
     }
   }
@@ -53,9 +53,21 @@
     &:hover {
       text-decoration: underline;
     }
+
+    @media screen AND (max-width:768px) {
+      &.toRight {
+        text-align: right;
+      }
+    }
   }
     
   &-logo {
     margin: 0 auto;
+  }
+
+  &-svg {
+    width: 5em;
+    height: 1.5em;
+    color: var(--netflix-red);
   }
 }
