@@ -3,7 +3,6 @@ import Logo from '../Logo/Logo'
 import './Header.scss'
 
 const Header = () => {
-
   return (
     <>
       <header className="Header">

@@ -1,8 +1,8 @@
-import { v4 as uuidv4 } from 'uuid' 
+import { v4 as uuidv4 } from 'uuid'
 import { PricingPlan } from '../types/Pricing-plan'
 
 export const PLANS: PricingPlan[] = [
-  { 
+  {
     id: uuidv4(),
     name: 'Premium',
     description: '4K + HDR',
@@ -15,7 +15,7 @@ export const PLANS: PricingPlan[] = [
     downloadsPerDevice: 6,
     ads: 'Sin anuncios'
   },
-  { 
+  {
     id: uuidv4(),
     name: 'Estándar',
     description: '1080p',
@@ -27,7 +27,7 @@ export const PLANS: PricingPlan[] = [
     downloadsPerDevice: 2,
     ads: 'Sin anuncios'
   },
-  { 
+  {
     id: uuidv4(),
     name: 'Estándar con anuncios',
     description: '1080p',
@@ -40,4 +40,3 @@ export const PLANS: PricingPlan[] = [
     ads: 'Algunas pausas publicitarias'
   }
 ] as const
-

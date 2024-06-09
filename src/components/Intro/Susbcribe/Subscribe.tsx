@@ -6,10 +6,10 @@ import './Subscribe.scss'
 } */
 
 // const Subscribe: React.FC<SubscribeProps> = ({ isOpen, onClose }) => {
-const Subscribe = ({ isOpen, onClose }:{ isOpen: boolean, onClose: () => void } ) => {
+const Subscribe = ({ isOpen, onClose }:{ isOpen: boolean, onClose: () => void }) => {
   return (
     <>
-      { isOpen && ( 
+      { isOpen && (
         <dialog className="Subscribe" open={isOpen}>
           <div className="Subscribe-column">
             <button className='Subscribe-close' onClick={onClose} aria-label='Cerrar'>
@@ -23,7 +23,7 @@ const Subscribe = ({ isOpen, onClose }:{ isOpen: boolean, onClose: () => void } 
               </header>
               <div className="Subscribe-body">
                 <p className="Subscribe-p">¿Quieres ver algo ya? Escribe tu dirección de correo para crear una suscripción a Netflix o reactivarla.</p>
-                {/* Create or reactivate membership form */}           
+                {/* Create or reactivate membership form */}
                 <form className="Subscribe-form Form" action="#" method="post">
                   <div className="Form-group Form-group--email">
                     <input id="focusEmail" className="Form-input" type="email" placeholder="" required/>
@@ -42,4 +42,4 @@ const Subscribe = ({ isOpen, onClose }:{ isOpen: boolean, onClose: () => void } 
   )
 }
 
-export default Subscribe;
+export default Subscribe

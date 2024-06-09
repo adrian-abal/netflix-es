@@ -7,8 +7,7 @@ import Pricing from './components/Pricing/Pricing'
 import Faq from './components/Faq/faq'
 import Footer from './components/Footer/Footer'
 
-function App() {
-
+function App () {
   return (
     <>
       <Header />
