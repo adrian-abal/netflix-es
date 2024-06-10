@@ -1,6 +1,18 @@
 @use './partials/_reset';
 @use './partials/_custom';
 
+::-webkit-scrollbar {
+  width: 0.4em;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2em;
+  background-color: var(--netflix-red);
+}
+::-webkit-scrollbar-track {
+  background-color: #000;
+}
+
 body {
   background-color: #000;
 }
