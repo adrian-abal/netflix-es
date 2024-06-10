@@ -22,6 +22,7 @@
 
   &-p {
     color: #ffffffb3;
+    margin:  0 auto;
   }
 
   &-phone {
@@ -34,30 +35,20 @@
   &-links {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 1em;
     row-gap: .5em;
   }
 
-  &-link {
-    width: calc(100% / 4);
-    
-    @media screen AND (max-width:768px) {
-      width: calc(100% / 2);
-    }
-  }
+  &-link {}
       
   &-a {
-    width: 100%;
+    width: fit-content;
     color: #ffffffb3;
     font-size: .875em;
     
     &:hover {
       text-decoration: underline;
-    }
-
-    @media screen AND (max-width:768px) {
-      &.toRight {
-        text-align: right;
-      }
     }
   }
     

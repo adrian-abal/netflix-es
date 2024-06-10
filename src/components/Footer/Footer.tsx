@@ -1,6 +1,5 @@
 import './Footer.scss'
 import { LINKS } from '../../consts/links-data'
-import Languages from '../Languages/Languages'
 
 const Footer = () => {
   return (
@@ -22,7 +21,6 @@ const Footer = () => {
                 })
               }
             </ul>
-            <Languages />
             <div className="Footer-logo">
               <svg
                 className="Footer-svg"
