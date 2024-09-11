@@ -1,3 +1,5 @@
+![Imagen del proyecto](https://github.com/adrian-abal/netflix-es/blob/main/public/Home.png)
+
 # Landing page de Netflix España.
 
 Repositorio donde he programado por diversión la página de Netflix España.
